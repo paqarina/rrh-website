@@ -1,0 +1,11 @@
+{
+  "name": "rrh-website",
+  "private": true,
+  "scripts": {
+    "start": "npx -y http-server@14.1.1 -p 5500 -c-1 .",
+    "images": "node tools/optimize-images.js"
+  },
+  "devDependencies": {
+    "sharp": "0.33.5"
+  }
+}

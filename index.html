@@ -10,18 +10,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="page-home">
 
-  <!-- Module - Hero (71:3463) -->
-  <header class="hero">
-    <div class="hero__media" aria-hidden="true">
-      <img src="assets/hero.png" alt="">
-    </div>
-
-    <div class="topbar">
-      <a class="logo" href="/" aria-label="Root River Hardwoods — home">
-        <img class="logo__wordmark" src="assets/logo-wordmark.svg" width="257.395" height="38.2726" alt="">
-        <img class="logo__tagline" src="assets/logo-tagline.svg" width="151.451" height="11.71" alt="">
+  <!-- Site header (71:3474) -->
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a class="logo" href="index.html" aria-label="Root River Hardwoods — home">
+        <img class="logo__wordmark" src="assets/logo/wordmark-light.svg" width="187.196" height="27.8346" alt="">
+        <img class="logo__tagline" src="assets/logo/tagline-light.svg" width="110.146" height="8.516" alt="">
       </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
@@ -31,34 +27,40 @@
       </button>
 
       <nav class="nav" id="primary-nav" aria-label="Primary">
-        <a class="nav__link" href="#millwork">Millwork</a>
-        <a class="nav__link" href="#doors">Doors</a>
+        <a class="nav__link" href="#services">Millwork</a>
+        <a class="nav__link" href="#services">Doors</a>
         <a class="nav__link" href="#projects">Projects</a>
-        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#why">About</a>
         <a class="nav__link" href="#resources">Resources</a>
         <a class="nav__link" href="#contact">Contact</a>
         <a class="btn nav__cta-mobile" href="#contact"><span class="btn__inner">Start a project</span></a>
       </nav>
 
-      <a class="btn topbar__cta" href="#contact"><span class="btn__inner">Start a project</span></a>
-    </div>
-
-    <div class="hero__bottom">
-      <h1 class="hero__title">
-        <span class="hero__title-line">We make<br>your vision</span>
-        <span class="hero__title-accent"><em>come to life</em>.</span>
-      </h1>
-      <div class="hero__aside">
-        <p class="hero__lede">Doors, trim, beams, stairs and the one-off details other shops turn away. ~Engineered, drawn and milled to order for custom home builders, architects and interior designers.</p>
-        <div class="hero__ctas">
-          <a class="btn" href="#contact"><span class="btn__inner">Start a project</span></a>
-          <p class="hero__cta-note">Bring us your vision.</p>
-        </div>
-      </div>
+      <a class="btn site-header__cta" href="#contact"><span class="btn__inner">Start a project</span></a>
     </div>
   </header>
 
   <main>
+    <!-- Module - Hero (71:3463) -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true">
+        <img src="assets/img/hero-home-960.webp" srcset="assets/img/hero-home-960.webp 960w, assets/img/hero-home-1635.webp 1635w" sizes="108vw" alt="" fetchpriority="high">
+      </div>
+      <div class="hero__bottom">
+        <h1 class="display hero__title" id="hero-title">
+          <span class="hero__title-line">We make<br>your vision</span>
+          <span class="hero__title-accent"><em>come to life</em>.</span>
+        </h1>
+        <div class="hero__aside">
+          <p class="hero__lede">Doors, trim, beams, stairs and the one-off details other shops turn away. ~Engineered, drawn and milled to order for custom home builders, architects and interior designers.</p>
+          <div class="hero__ctas">
+            <a class="btn" href="#contact"><span class="btn__inner">Start a project</span></a>
+            <p class="hero__cta-note">Bring us your vision.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Module - Stats (71:3507) -->
     <section class="section stats" aria-label="By the numbers">
       <ul class="container stats__list">
@@ -82,62 +84,63 @@
     </section>
 
     <!-- Module - What we do (71:3541) -->
-    <section class="section what" id="millwork" aria-labelledby="what-title">
-      <div class="container what__content">
-        <div class="what__header">
+    <section class="section" aria-labelledby="what-title">
+      <div class="container split">
+        <div class="split__media">
+          <img src="assets/img/home-what-we-do-800.webp" srcset="assets/img/home-what-we-do-800.webp 800w, assets/img/home-what-we-do-1600.webp 1600w" sizes="(max-width: 1100px) calc(100vw - 80px), min(776px, 45vw)" alt="Dining room with custom millwork and a wall of windows" loading="lazy">
+        </div>
+        <div class="split__copy">
           <p class="eyebrow">What we do</p>
           <h2 class="h2" id="what-title">If you can draw it,<br>we can mill it.</h2>
-        </div>
-        <div class="what__text">
-          <p class="what__highlight">Non-standard doors. Lock-mitered beams. A profile matched to the 1920s trim already in the house. An arch shared across a door and its sidelites.</p>
-          <p class="what__body">Most millwork shops prefer standard sizes and standard catalogs. We are set up for the opposite: a team of craftspeople, drafters and estimators who take a sketch, a spec or a Pinterest screenshot and turn it into something a builder can install. And the same standard runs through every simple piece of trim we send out.</p>
+          <p class="lede-strong">Non-standard doors. Lock-mitered beams. A profile matched to the 1920s trim already in the house. An arch shared across a door and its sidelites.</p>
+          <p class="body-lg">Most millwork shops prefer standard sizes and standard catalogs. We are set up for the opposite: a team of craftspeople, drafters and estimators who take a sketch, a spec or a Pinterest screenshot and turn it into something a builder can install. And the same standard runs through every simple piece of trim we send out.</p>
+          <a class="btn btn--light" href="#contact"><span class="btn__inner">Start a project</span></a>
         </div>
       </div>
     </section>
 
     <!-- Module - Who we work with (71:3628) -->
-    <section class="section who" aria-labelledby="who-title">
+    <section class="section section--white" aria-labelledby="who-title">
       <div class="container">
-        <div class="who__heading">
+        <div class="section-head">
           <div>
             <p class="eyebrow">Who we work with</p>
             <h2 class="h2" id="who-title">Built for the people who build, specify and design the home.</h2>
           </div>
         </div>
-
-        <div class="cards">
-          <article class="card">
-            <div class="card__image"><img src="assets/card-home.png" alt="Craftsman-style home at dusk" loading="lazy"></div>
-            <div class="card__content">
-              <p class="card__eyebrow">Home builders</p>
-              <h3 class="card__title">One supplier. No surprises on site.</h3>
-              <ul class="card__list">
+        <div class="card-grid">
+          <article class="panel-card">
+            <div class="panel-card__image"><img src="assets/img/who-builders-497.webp" srcset="assets/img/who-builders-497.webp 497w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(475px, 30vw)" alt="Timber-frame home exterior" loading="lazy"></div>
+            <div class="panel-card__content">
+              <p class="panel-card__eyebrow">Home builders</p>
+              <h3 class="panel-card__title">One supplier. No surprises on site.</h3>
+              <ul class="rule-list">
                 <li>We own the full door and millwork package</li>
                 <li>Installation guides for your crew</li>
                 <li>Details verified before an order is locked</li>
               </ul>
             </div>
           </article>
-          <article class="card">
-            <div class="card__image"><img src="assets/card-home.png" alt="Craftsman-style home at dusk" loading="lazy"></div>
-            <div class="card__content">
-              <p class="card__eyebrow">Home builders</p>
-              <h3 class="card__title">One supplier. No surprises on site.</h3>
-              <ul class="card__list">
-                <li>We own the full door and millwork package</li>
+          <article class="panel-card">
+            <div class="panel-card__image"><img src="assets/img/who-architects-607.webp" srcset="assets/img/who-architects-480.webp 480w, assets/img/who-architects-607.webp 607w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(475px, 30vw)" alt="Architect reviewing drawings" loading="lazy"></div>
+            <div class="panel-card__content">
+              <p class="panel-card__eyebrow">Architects</p>
+              <h3 class="panel-card__title">An extension of your design team.</h3>
+              <ul class="rule-list">
+                <li>DWG files that match your master plans</li>
                 <li>Installation guides for your crew</li>
                 <li>Details verified before an order is locked</li>
               </ul>
             </div>
           </article>
-          <article class="card">
-            <div class="card__image"><img src="assets/card-home.png" alt="Craftsman-style home at dusk" loading="lazy"></div>
-            <div class="card__content">
-              <p class="card__eyebrow">Home builders</p>
-              <h3 class="card__title">One supplier. No surprises on site.</h3>
-              <ul class="card__list">
-                <li>We own the full door and millwork package</li>
-                <li>Installation guides for your crew</li>
+          <article class="panel-card">
+            <div class="panel-card__image"><img src="assets/img/who-designers-687.webp" srcset="assets/img/who-designers-480.webp 480w, assets/img/who-designers-687.webp 687w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(475px, 30vw)" alt="Interior designer at work in a library room" loading="lazy"></div>
+            <div class="panel-card__content">
+              <p class="panel-card__eyebrow">Interior designers</p>
+              <h3 class="panel-card__title">Bring us the inspiration.</h3>
+              <ul class="rule-list">
+                <li>Send a photo, we recreate the detail</li>
+                <li>Species and grain matched across the home</li>
                 <li>Details verified before an order is locked</li>
               </ul>
             </div>
@@ -145,17 +148,306 @@
         </div>
       </div>
     </section>
+
+    <!-- Module - Our services (88:637) -->
+    <section class="section section--white" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Millwork</p>
+            <h2 class="h2" id="services-title">Our services</h2>
+          </div>
+        </div>
+        <div class="card-grid">
+          <article class="tile-card">
+            <div class="tile-card__image"><img src="assets/img/service-doors-960.webp" srcset="assets/img/service-doors-480.webp 480w, assets/img/service-doors-960.webp 960w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(475px, 30vw)" alt="Custom wood door" loading="lazy"></div>
+            <div class="tile-card__content">
+              <h3 class="tile-card__title">Doors</h3>
+              <ul class="rule-list"><li>Any width, height, and jamb detail.</li></ul>
+              <div class="tile-card__tools"><a class="link-more" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="tile-card">
+            <div class="tile-card__image"><img src="assets/img/service-trim-960.webp" srcset="assets/img/service-trim-480.webp 480w, assets/img/service-trim-960.webp 960w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(475px, 30vw)" alt="Arched trim and mouldings" loading="lazy"></div>
+            <div class="tile-card__content">
+              <h3 class="tile-card__title">Trims &amp; Mouldings</h3>
+              <ul class="rule-list"><li>Casing, base, crown, and custom profiles.</li></ul>
+              <div class="tile-card__tools"><a class="link-more" href="trim-mouldings.html">Learn more</a></div>
+            </div>
+          </article>
+          <article class="tile-card">
+            <div class="tile-card__image"><img src="assets/img/service-beams-960.webp" srcset="assets/img/service-beams-480.webp 480w, assets/img/service-beams-960.webp 960w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(475px, 30vw)" alt="Coffered ceiling with wood beams" loading="lazy"></div>
+            <div class="tile-card__content">
+              <h3 class="tile-card__title">Beams &amp; Ceilings</h3>
+              <ul class="rule-list"><li>Box, mitered and drop beams.</li></ul>
+              <div class="tile-card__tools"><a class="link-more" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="tile-card">
+            <div class="tile-card__image"><img src="assets/img/service-stairs-739.webp" srcset="assets/img/service-stairs-480.webp 480w, assets/img/service-stairs-739.webp 739w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(475px, 30vw)" alt="Staircase with wood treads and rail" loading="lazy"></div>
+            <div class="tile-card__content">
+              <h3 class="tile-card__title">Staircase Components</h3>
+              <ul class="rule-list"><li>Treads, box treads, newels, rails.</li></ul>
+              <div class="tile-card__tools"><a class="link-more" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="tile-card">
+            <div class="tile-card__image"><img src="assets/img/service-paneling-960.webp" srcset="assets/img/service-paneling-480.webp 480w, assets/img/service-paneling-960.webp 960w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(475px, 30vw)" alt="Wood-paneled fireplace wall" loading="lazy"></div>
+            <div class="tile-card__content">
+              <h3 class="tile-card__title">Paneling</h3>
+              <ul class="rule-list"><li>Any width, height, and jamb detail.</li></ul>
+              <div class="tile-card__tools"><a class="link-more" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="tile-card">
+            <div class="tile-card__image"><img src="assets/img/service-architectural-800.webp" srcset="assets/img/service-architectural-480.webp 480w, assets/img/service-architectural-800.webp 800w, assets/img/service-architectural-1254.webp 1254w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(475px, 30vw)" alt="Curved crown moulding detail" loading="lazy"></div>
+            <div class="tile-card__content">
+              <h3 class="tile-card__title">Architectural Details</h3>
+              <ul class="rule-list"><li>Corbels, mantels, radius and arched work.</li></ul>
+              <div class="tile-card__tools"><a class="link-more" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <!-- Figma repeats "Architectural Details" as a 7th card (92:1764); kept to match the layout -->
+          <article class="tile-card">
+            <div class="tile-card__image"><img src="assets/img/service-architectural-800.webp" srcset="assets/img/service-architectural-480.webp 480w, assets/img/service-architectural-800.webp 800w, assets/img/service-architectural-1254.webp 1254w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(475px, 30vw)" alt="Curved crown moulding detail" loading="lazy"></div>
+            <div class="tile-card__content">
+              <h3 class="tile-card__title">Architectural Details</h3>
+              <ul class="rule-list"><li>Corbels, mantels, radius and arched work.</li></ul>
+              <div class="tile-card__tools"><a class="link-more" href="#">Learn more</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Module - Why Root River (92:1605) -->
+    <section class="section" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Why Root River</p>
+            <h2 class="h2" id="why-title">We don't just take the order.<br>We solve the details.</h2>
+          </div>
+        </div>
+        <div class="card-grid">
+          <article class="feature">
+            <div class="feature__icon"><img src="assets/icons/why-knives.svg" width="80.2332" height="88.8156" alt=""></div>
+            <div class="feature__content">
+              <h3 class="feature__title">Custom knives, in-house</h3>
+              <p class="feature__text">If your profile isn't in our library, we grind the knife to match your design. Historic match or modern original.</p>
+              <p class="feature__note">The shapes catalogs can't do</p>
+            </div>
+          </article>
+          <article class="feature">
+            <div class="feature__icon"><img src="assets/icons/why-drawings.svg" width="80.4" height="84" alt=""></div>
+            <div class="feature__content">
+              <h3 class="feature__title">Drawings before production</h3>
+              <p class="feature__text">We prepare detailed profile drawings for your review and approval before production begins. Our CAD support helps ensure dimensions and design details are right before the first cut.</p>
+              <p class="feature__note">Clarity before production.</p>
+            </div>
+          </article>
+          <article class="feature">
+            <div class="feature__icon"><img src="assets/icons/why-samples.png" width="119.096" height="128" alt=""></div>
+            <div class="feature__content">
+              <h3 class="feature__title">Samples you can hold</h3>
+              <p class="feature__text">For larger orders, or upon request, we can provide physical samples for review before production. This allows you to evaluate the profile and details firsthand before moving forward.</p>
+              <p class="feature__note">Available for qualifying projects or by request.</p>
+            </div>
+          </article>
+          <article class="feature">
+            <div class="feature__icon"><img src="assets/icons/why-geometry.svg" width="84.1242" height="89.6523" alt=""></div>
+            <div class="feature__content">
+              <h3 class="feature__title">Complex geometry</h3>
+              <p class="feature__text">From radius and curved millwork to intricate profiles and lock-miter assemblies, we have the technical capabilities and experience to take on demanding architectural details.</p>
+              <p class="feature__note">Solutions for challenging designs.</p>
+            </div>
+          </article>
+          <article class="feature">
+            <div class="feature__icon"><img src="assets/icons/why-specialists.svg" width="91.3304" height="74.018" alt=""></div>
+            <div class="feature__content">
+              <h3 class="feature__title">Dedicated specialists</h3>
+              <p class="feature__text">Our team brings together hands-on woodworking experience and technical knowledge. We work closely with you throughout the process, helping move your project from initial drawings to finished millwork.</p>
+              <p class="feature__note">Experience at every stage.</p>
+            </div>
+          </article>
+          <article class="feature">
+            <div class="feature__icon"><img src="assets/icons/why-hardware.svg" width="68.4" height="85.2" alt=""></div>
+            <div class="feature__content">
+              <h3 class="feature__title">Hardware &amp; code expertise</h3>
+              <p class="feature__text">Custom projects often involve more than the millwork itself. We coordinate technical details, backing and installation requirements, and communication with onsite trades to help keep everything aligned.</p>
+              <p class="feature__note">Details that work together.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Module - Projects (103:2116) -->
+    <section class="section section--white" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2" id="projects-title">Recent projects</h2>
+          <div class="section-head__tools">
+            <a class="btn btn--light" href="#"><span class="btn__inner">See all projects</span></a>
+          </div>
+        </div>
+        <div class="projects">
+          <div class="projects__col">
+            <article class="project">
+              <div class="project__image project__image--tall"><img src="assets/img/project-01-820.webp" srcset="assets/img/project-01-820.webp 820w, assets/img/project-01-1640.webp 1640w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(816px, 47vw)" alt="Project 01" loading="lazy"></div>
+              <div class="project__content">
+                <h3 class="project__title">Project 01</h3>
+                <p class="project__meta">Project description / Location / Year</p>
+              </div>
+            </article>
+            <article class="project">
+              <div class="project__image project__image--wide"><img src="assets/img/project-03-820.webp" srcset="assets/img/project-03-820.webp 820w, assets/img/project-03-1640.webp 1640w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(816px, 47vw)" alt="Project 03" loading="lazy"></div>
+              <div class="project__content">
+                <h3 class="project__title">Project 03</h3>
+                <p class="project__meta">Project description / Location / Year</p>
+              </div>
+            </article>
+          </div>
+          <div class="projects__col">
+            <article class="project">
+              <div class="project__image project__image--wide"><img src="assets/img/project-02-820.webp" srcset="assets/img/project-02-820.webp 820w, assets/img/project-02-1640.webp 1640w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(816px, 47vw)" alt="Project 02" loading="lazy"></div>
+              <div class="project__content">
+                <h3 class="project__title">Project 02</h3>
+                <p class="project__meta">Project description / Location / Year</p>
+              </div>
+            </article>
+            <article class="project">
+              <div class="project__image project__image--tall"><img src="assets/img/project-04-820.webp" srcset="assets/img/project-04-820.webp 820w, assets/img/project-04-1640.webp 1640w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(816px, 47vw)" alt="Project 04" loading="lazy"></div>
+              <div class="project__content">
+                <h3 class="project__title">Project 04</h3>
+                <p class="project__meta">Project description / Location / Year</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Module - Brands (111:2441) -->
+    <section class="section section--white" aria-labelledby="brands-title">
+      <div class="container">
+        <h2 class="eyebrow eyebrow--lg brands__eyebrow" id="brands-title">Trusted by builders across the region</h2>
+        <ul class="brands__grid">
+          <li class="brands__item brands__item--fill"><img src="assets/brands/brand-1.webp" width="229" height="62" alt="[CONFIRM] Builder logo 1" loading="lazy"></li>
+          <li class="brands__item brands__item--fill"><img src="assets/brands/brand-2.webp" width="276" height="72" alt="Quanex" loading="lazy"></li>
+          <li class="brands__item"><img src="assets/brands/brand-3.webp" width="162" height="54.831" alt="Ryan" loading="lazy"></li>
+          <li class="brands__item"><img src="assets/brands/brand-4.webp" width="100" height="80" alt="[CONFIRM] Builder logo 4" loading="lazy"></li>
+          <li class="brands__item"><img src="assets/brands/brand-5.webp" width="134" height="70" alt="[CONFIRM] Builder logo 5" loading="lazy"></li>
+          <li class="brands__item"><img src="assets/brands/brand-6.webp" width="169" height="64" alt="Benike Construction" loading="lazy"></li>
+          <li class="brands__item"><img src="assets/brands/brand-7.webp" width="79" height="80" alt="[CONFIRM] Builder logo 7" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Module - Proof Phrase (114:2490) -->
+    <section class="section section--white section--lg" aria-labelledby="quote-title">
+      <figure class="container quote">
+        <h2 class="eyebrow eyebrow--lg" id="quote-title">What our clients say</h2>
+        <blockquote class="quote__text">“We have been working successfully with Root River Hardwoods for many years for our millwork and door needs. Everyone from the top down is easy to work with, accessible, and dedicated to customer service. We thoroughly enjoy working with everyone at Root River and highly recommend them to anyone in need of their products.”</blockquote>
+        <figcaption class="quote__author">John Kraemer - Kraemer &amp; Sons Inc</figcaption>
+      </figure>
+    </section>
+
+    <!-- Module - Resources (117:2658) -->
+    <section class="section" id="resources" aria-labelledby="resources-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Resources</p>
+            <h2 class="h2" id="resources-title">Everything you need to make informed design decisions.</h2>
+          </div>
+          <div class="section-head__tools">
+            <a class="btn btn--light" href="#"><span class="btn__inner">See all resources</span></a>
+          </div>
+        </div>
+        <div class="card-grid">
+          <article class="tile-card">
+            <div class="tile-card__image"><img src="assets/img/resource-styles-500.webp" srcset="assets/img/resource-styles-500.webp 500w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(475px, 30vw)" alt="Living room with exposed ceiling beams" loading="lazy"></div>
+            <div class="tile-card__content">
+              <h3 class="tile-card__title">Styles Inspiration</h3>
+              <ul class="rule-list"><li>Corbels, mantels, radius and arched work.</li></ul>
+              <div class="tile-card__tools"><a class="link-more" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="tile-card">
+            <div class="tile-card__image"><img src="assets/img/resource-architectural-707.webp" srcset="assets/img/resource-architectural-480.webp 480w, assets/img/resource-architectural-707.webp 707w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(475px, 30vw)" alt="Built-in shelving detail" loading="lazy"></div>
+            <div class="tile-card__content">
+              <h3 class="tile-card__title">Architectural Details</h3>
+              <ul class="rule-list"><li>Corbels, mantels, radius and arched work.</li></ul>
+              <div class="tile-card__tools"><a class="link-more" href="#">Learn more</a></div>
+            </div>
+          </article>
+          <article class="tile-card">
+            <div class="tile-card__image"><img src="assets/img/resource-beams-263.webp" srcset="assets/img/resource-beams-263.webp 263w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 56px), min(475px, 30vw)" alt="Moulding profile samples" loading="lazy"></div>
+            <div class="tile-card__content">
+              <h3 class="tile-card__title">Beams &amp; Ceilings</h3>
+              <ul class="rule-list"><li>Our ready-to-run profiles with reference numbers, to call out on your plans.</li></ul>
+              <div class="tile-card__tools"><a class="link-more" href="#">Learn more</a></div>
+            </div>
+          </article>
+        </div>
+        <div class="section-foot">
+          <a class="btn btn--light" href="#contact"><span class="btn__inner">Start a project</span></a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script>
-    (function () {
-      var toggle = document.querySelector('.menu-toggle');
-      var topbar = document.querySelector('.topbar');
-      toggle.addEventListener('click', function () {
-        var open = topbar.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    })();
-  </script>
+  <!-- Footer (117:3215) -->
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__grid">
+      <div>
+        <a class="logo" href="index.html" aria-label="Root River Hardwoods — home">
+          <img class="logo__wordmark" src="assets/logo/wordmark-light.svg" width="187.196" height="27.8346" alt="">
+          <img class="logo__tagline" src="assets/logo/tagline-light.svg" width="110.146" height="8.516" alt="">
+        </a>
+        <address class="site-footer__address">
+          <p>1300 Highway 52 N, Preston, MN 55965</p>
+          <p><a href="tel:+15077652362">507-765-2362</a></p>
+          <p>Serving Minnesota, Wisconsin, Iowa and beyond</p>
+        </address>
+      </div>
+      <nav class="site-footer__links" aria-label="Footer">
+        <div>
+          <p class="site-footer__heading">Millwork</p>
+          <ul class="site-footer__list">
+            <li><a href="#services">Doors</a></li>
+            <li><a href="trim-mouldings.html">Trim &amp; Mouldings</a></li>
+            <li><a href="#services">Beams &amp; Ceilings</a></li>
+            <li><a href="#services">Stair Components</a></li>
+            <li><a href="#services">Panelling</a></li>
+            <li><a href="#services">Architectural Details</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="site-footer__heading">Company</p>
+          <ul class="site-footer__list">
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="site-footer__heading">Contact</p>
+          <ul class="site-footer__list">
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <div class="site-footer__social">
+            <a href="#" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" width="24" height="24" alt=""></a>
+            <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" width="24" height="24" alt=""></a>
+            <a href="#" aria-label="Facebook"><img src="assets/icons/facebook.svg" width="24" height="24" alt=""></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/site.js" defer></script>
 </body>
 </html>
