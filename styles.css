@@ -171,7 +171,7 @@
   --font-serif: "Cormorant", "Cormorant Garamond", Georgia, serif;
   --font-sans: "Lato", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-weight-regular: 400;
-  --font-weight-medium: 500;   /* Lato Medium: self-host Lato 2.0 to render; falls back to 400 */
+  --font-weight-medium: 500;   /* Cormorant Medium only (display + quote); Lato has no Medium in the design */
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
@@ -404,7 +404,7 @@ button { font: inherit; color: inherit; }
   padding: 12px 24px;
   border: 2px solid var(--color-border-button);
   background: var(--color-bg-button);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
   font-size: var(--text-label-m-size);
   line-height: var(--text-label-m-lh);
   letter-spacing: var(--tracking-caps);
@@ -429,7 +429,7 @@ button { font: inherit; color: inherit; }
   display: inline-block;
   padding: 6px 0;
   border-bottom: 2px solid var(--color-border-accent-subtle);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
   font-size: var(--text-label-s-size);
   line-height: var(--text-label-s-lh);
   letter-spacing: var(--tracking-caps);
@@ -515,7 +515,7 @@ button { font: inherit; color: inherit; }
 /* Label/M */
 .nav__link {
   padding: 12px 24px;
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
   font-size: var(--text-label-m-size);
   line-height: var(--text-label-m-lh);
   letter-spacing: var(--tracking-caps);
