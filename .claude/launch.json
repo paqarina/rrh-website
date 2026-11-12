@@ -1,6 +1,12 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "static", "runtimeExecutable": "npx", "runtimeArgs": ["-y", "http-server@14.1.1", "-p", "5500", "-c-1", "."], "port": 5500 }
+    { "name": "static", "runtimeExecutable": "npx", "runtimeArgs": ["-y", "http-server@14.1.1", "-p", "5500", "-c-1", "."], "port": 5500 },
+    {
+      "name": "root-river-astro",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "root-river-website", "run", "dev"],
+      "port": 4321
+    }
   ]
 }
