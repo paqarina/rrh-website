@@ -1,0 +1,336 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL("/assets/hero.png", Astro.url);
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <link rel="canonical" href={canonicalURL} />
+  <title>{SITE_TITLE}</title>
+  <meta name="description" content={SITE_DESCRIPTION} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.url} />
+  <meta property="og:title" content={SITE_TITLE} />
+  <meta property="og:description" content={SITE_DESCRIPTION} />
+  <meta property="og:image" content={ogImage} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <style is:global>
+    :root {
+      --cream: #e8e4e0;
+      --cream-light: #f3eee9;
+      --gold: #ddac76;
+      --paper: #fbf9f5;
+      --ink: #262524;
+      --ink-muted: #605c59;
+      --line-light: rgba(232, 228, 224, 0.5);
+      --font-serif: "Cormorant", Georgia, serif;
+      --font-sans: "Lato", system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    p { margin: 0; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ---------- Button ---------- */
+    .btn {
+      display: inline-block;
+      padding: 2px;
+      border: 2px solid var(--line-light);
+      flex-shrink: 0;
+    }
+    .btn span {
+      display: block;
+      padding: 12px 24px;
+      border: 2px solid var(--line-light);
+      background: rgba(42, 34, 25, 0.1);
+      color: var(--cream);
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: background-color 0.2s ease;
+    }
+    .btn:hover span,
+    .btn:focus-visible span { background: rgba(42, 34, 25, 0.35); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1920 / 1151;
+      min-height: 720px;
+      color: var(--cream);
+    }
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .hero__bg img {
+      position: absolute;
+      left: -1.89%;
+      top: -5.73%;
+      width: 107.82%;
+      height: 105.82%;
+      max-width: none;
+      object-fit: cover;
+    }
+    .hero__bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+        rgba(40, 34, 31, 0.4) 10%,
+        rgba(117, 93, 81, 0.25) 25%,
+        rgba(53, 41, 36, 0.5) 63.17%,
+        rgba(15, 12, 10, 0.8) 100%);
+    }
+
+    .topbar {
+      position: absolute;
+      top: 32px;
+      left: 64px;
+      right: 64px;
+      height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      z-index: 1;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 11.636px;
+      width: 187.636px;
+      flex-shrink: 0;
+    }
+    .logo img { display: block; }
+    .nav {
+      position: absolute;
+      left: calc(50% - 0.5px);
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+    }
+    .nav a {
+      padding: 12px 24px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: var(--cream);
+      transition: color 0.2s ease;
+    }
+    .nav a:hover,
+    .nav a:focus-visible { color: var(--gold); }
+
+    .hero__bottom {
+      position: absolute;
+      left: 96px;
+      right: 96px;
+      bottom: 96px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      z-index: 1;
+    }
+    .hero__title {
+      flex: 1 1 0;
+      min-width: 0;
+      margin: 0;
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: 120px;
+      line-height: 100px;
+      letter-spacing: -1.2px;
+      color: var(--cream);
+    }
+    .hero__title .accent { color: var(--gold); }
+    .hero__title em { font-style: italic; }
+
+    .hero__aside {
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      padding: 24px 0;
+    }
+    .hero__lede {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.36px;
+      color: var(--cream-light);
+    }
+    .hero__cta {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .hero__cta-note {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.36px;
+      color: var(--cream-light);
+      white-space: nowrap;
+    }
+
+    /* ---------- Stats ---------- */
+    .stats {
+      background: var(--paper);
+      display: flex;
+      justify-content: center;
+      padding: 128px 64px;
+    }
+    .stats__list {
+      flex: 1 1 0;
+      max-width: 1680px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      column-gap: 64px;
+      row-gap: 64px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .stat { max-width: 320px; }
+    .stat__value {
+      padding-bottom: 24px;
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 72px;
+      color: var(--ink);
+    }
+    .stat__label {
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.18px;
+      color: var(--ink-muted);
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1400px) {
+      .hero__title { font-size: 96px; line-height: 84px; }
+    }
+    @media (max-width: 1200px) {
+      .nav { display: none; }
+    }
+    @media (max-width: 1024px) {
+      .hero { aspect-ratio: auto; min-height: 100vh; }
+      .hero__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        left: 48px;
+        right: 48px;
+        bottom: 64px;
+      }
+      .hero__title { font-size: 80px; line-height: 72px; }
+      .stats { padding: 96px 48px; }
+      .stats__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .topbar { left: 16px; right: 16px; top: 16px; }
+      .topbar .btn { display: none; }
+      .hero__bottom { left: 16px; right: 16px; bottom: 40px; gap: 16px; }
+      .hero__title { font-size: 56px; line-height: 52px; }
+      .hero__cta { gap: 16px; }
+      .stats { padding: 64px 16px; }
+      .stats__list { grid-template-columns: 1fr; row-gap: 40px; }
+      .stat__value { font-size: 52px; line-height: 60px; padding-bottom: 12px; }
+    }
+    </style>
+</head>
+<body>
+  <section class="hero" data-node-id="71:3463">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="/assets/hero.png" alt="">
+    </div>
+
+    <header class="topbar">
+      <a class="logo" href="/" aria-label="Root River Hardwoods home">
+        <img src="/assets/logo-wordmark.svg" width="187.196" height="27.8346" alt="">
+        <img src="/assets/logo-tagline.svg" width="110.146" height="8.51639" alt="">
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#">Millwork</a>
+        <a href="#">Doors</a>
+        <a href="#">Projects</a>
+        <a href="#">About</a>
+        <a href="/blog">Resources</a>
+        <a href="#">Contact</a>
+      </nav>
+      <a class="btn" href="#"><span>Start a project</span></a>
+    </header>
+
+    <div class="hero__bottom">
+      <h1 class="hero__title">
+        We make<br>your vision<br>
+        <span class="accent"><em>come to life</em>.</span>
+      </h1>
+      <div class="hero__aside">
+        <p class="hero__lede">
+          Doors, trim, beams, stairs and the one-off details other shops turn away. ~Engineered, drawn and milled to order for custom home builders, architects and interior designers.
+        </p>
+        <div class="hero__cta">
+          <a class="btn" href="#"><span>Start a project</span></a>
+          <p class="hero__cta-note">Bring us your vision.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" data-node-id="71:3507" aria-label="Root River by the numbers">
+    <ul class="stats__list">
+      <li class="stat">
+        <p class="stat__value">1,500+</p>
+        <p class="stat__label">Moulding profiles in our library, and we cut new knives to match yours.</p>
+      </li>
+      <li class="stat">
+        <p class="stat__value">800+</p>
+        <p class="stat__label">Custom homes finished with our doors, trim, beams and stairs.</p>
+      </li>
+      <li class="stat">
+        <p class="stat__value">200</p>
+        <p class="stat__label">Builders, architects and designers who keep bringing us their next project. Editing now.</p>
+      </li>
+      <li class="stat">
+        <p class="stat__value">100%</p>
+        <p class="stat__label">Drawn, milled and finished to order in our own shop. Nothing off the shelf.</p>
+      </li>
+    </ul>
+  </section>
+</body>
+</html>
